@@ -10,6 +10,10 @@ const db = {
   }
 };
 
+router.get('/', function (req, res, next) {
+  return res.json(db);
+});
+
 router.get('/:username', function (req, res, next) {
   const username = req.params.username;
   if (!(username in db)) {
@@ -18,10 +22,12 @@ router.get('/:username', function (req, res, next) {
   return res.json(db[username]);
 });
 
+router.
+
 router.post('/:username', function (req, res, next) {
   const username = req.params.username
   if (!(username in db)) {
-    return res.json({ error: 'User not found!' });
+    db[username] = { points: 0 };
   }
   const points = req.body.points;
   db[username].points += points;
