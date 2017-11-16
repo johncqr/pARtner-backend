@@ -22,8 +22,6 @@ router.get('/:username', function (req, res, next) {
   return res.json(db[username]);
 });
 
-router.
-
 router.post('/:username', function (req, res, next) {
   const username = req.params.username
   if (!(username in db)) {
