@@ -1,14 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const db = {
-  'DackJorsey': {
-    points: 0
-  },
-  'ParryLage': {
-    points: 0
-  }
-};
+let db = require('../libs/db');
 
 router.get('/', function (req, res, next) {
   return res.json(db);

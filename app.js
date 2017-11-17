@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var session = require('client-sessions');
 
 var app = express();
 
@@ -21,6 +22,24 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  cookieName: 'session',
+  secret: 'partner_secret',
+  duration: 30 * 60 * 1000,
+  activeDuration: 5 * 60 * 1000,
+}));
+
+app.use(function(req, res, next) {
+  if (req.session && req.session.user) {
+      req.user = user;
+      req.session.user = user;
+      res.locals.user = user;
+      next();
+  } else {
+    next();
+  }
+});
 
 app.use('/', index);
 app.use('/users', users);
