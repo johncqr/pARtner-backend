@@ -1,8 +1,27 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-a {
-  color: #00B7FF;
+a:link, a:visited, a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    background: #3253F6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background: #9ADB3F;
+    font-family: "Cabin Sketch";
+    font-size: 2rem;
+    padding: 1.4rem;
+    margin: 10px;
+    border: 5px solid white;
+    border-radius: 20px;
 }

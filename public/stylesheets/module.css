@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #3253F6;
+}
+
+h1, p {
+    padding: 1rem;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Cabin Sketch";
+    font-size: 5rem;
+}
+
+p {
+    background: #9ADB3F;
+    font-family: Helvetica, sans-serif;
+    font-size: 3rem;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+ul {
+    padding: 5px;
+}
