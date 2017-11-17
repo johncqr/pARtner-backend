@@ -8,8 +8,14 @@ a:link, a:visited, a:active {
     text-decoration: none;
 }
 
+
 body {
     background: #3253F6;
+    width: 100%;
+}
+
+img {
+    width: 100%;
 }
 
 ul {
